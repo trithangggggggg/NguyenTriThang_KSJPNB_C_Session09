@@ -2,7 +2,7 @@
 
 int main() {
     int array[100];
-    int n, value, addindex;
+    int n, addvalue, addindex;
 
     printf("Nhap so phan tu muon nhap: ");
     scanf("%d", &n);
@@ -19,7 +19,7 @@ int main() {
     }
 
     printf("Nhap gia tri can chen: ");
-    scanf("%d", &value);
+    scanf("%d", &addvalue);
 
     printf("Nhap vi tri muon chen (1-%d): ", n + 1);
     scanf("%d", &addindex);
@@ -32,14 +32,12 @@ int main() {
     for (int i = n; i >= addindex; i--) {
         array[i] = array[i - 1];
     }
-    array[addindex - 1] = value;
+    array[addindex - 1] = addvalue;
     n++;
 
     printf("Mang sau khi chen: ");
     for (int i = 0; i < n; i++) {
         printf("%d ", array[i]);
     }
-    printf("\n");
-
     return 0;
 }
